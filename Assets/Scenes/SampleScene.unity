@@ -528,6 +528,7 @@ GameObject:
   - component: {fileID: 629124733}
   - component: {fileID: 629124732}
   - component: {fileID: 629124736}
+  - component: {fileID: 629124737}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -602,7 +603,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629124731}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.636, y: 0.726, z: 1.45}
+  m_LocalPosition: {x: 0.636, y: 0.59, z: 1.22}
   m_LocalScale: {x: 0.2, y: 0.4, z: 0.3}
   m_Children:
   - {fileID: 276660678}
@@ -624,6 +625,25 @@ MonoBehaviour:
   bullet: {fileID: 3986107787031317211, guid: 877e081e60b62f84e94ed0e1ae0b8962, type: 3}
   spawnPoint: {fileID: 276660678}
   player: {fileID: 1883325030}
+--- !u!95 &629124737
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629124731}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8757d9684e45779438413c98ca030a8a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &656308110
 GameObject:
   m_ObjectHideFlags: 0
