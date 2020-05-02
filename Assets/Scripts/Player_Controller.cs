@@ -6,11 +6,14 @@ public class Player_Controller : MonoBehaviour
 {
     public float speed;
     private Rigidbody rb;
+    public GameObject gun;
+    private Animator aa;
 
 
     void Start()
     {
 
+        aa = gun.GetComponent<Animator>();
 
         rb = GetComponent<Rigidbody>();
 
@@ -21,6 +24,7 @@ public class Player_Controller : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
+        aa.SetFloat("movement", moveVertical);
 
 
         rb.AddForce(transform.forward * speed * moveVertical);
