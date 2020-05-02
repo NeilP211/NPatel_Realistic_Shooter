@@ -7,6 +7,7 @@ public class Camera_Controller : MonoBehaviour
     // Start is called before the first frame update
     
     public GameObject player;
+    public GameObject leftRight;
 
     public float mouseSensitivity;
 
@@ -46,7 +47,8 @@ public class Camera_Controller : MonoBehaviour
         //_rotationY = Mathf.Clamp(_rotationY, minimumVert, maximumVert); //Clamps the vertical angle within the min and max limits (45 degrees)
         //float rotationY = transform.localEulerAngles.y;
 
-        player.transform.localEulerAngles = new Vector3(_rotationX, -_rotationY, 0);
+        leftRight.transform.localEulerAngles = new Vector3(_rotationX, 0, 0);
+        player.transform.localEulerAngles = new Vector3(0, -_rotationY, 0);
 
     }
 

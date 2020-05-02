@@ -24,10 +24,11 @@ public class Player_Controller : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        aa.SetFloat("movement", moveVertical);
+        aa.SetFloat("Movement", moveVertical);
 
-
+        
         rb.AddForce(transform.forward * speed * moveVertical);
         rb.AddForce(transform.right * speed * moveHorizontal);
+        
     }
 }
