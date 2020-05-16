@@ -22,7 +22,7 @@ public class Instantiate : MonoBehaviour
         {
             Rigidbody bulletInstance;
             bulletInstance = Instantiate(bullet.GetComponent<Rigidbody>(), spawnPoint.position, spawnPoint.rotation);
-            bulletInstance.AddForce(spawnPoint.forward * 2000f);
+            bulletInstance.AddForce(spawnPoint.forward * 4000f);
         }
     }
 }

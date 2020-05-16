@@ -5,9 +5,11 @@ using UnityEngine;
 public class destroyedwhenshot : MonoBehaviour
 {
 
-    void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "thetag")
+        Debug.Log(other.gameObject.tag);
+        if (other.gameObject.tag == "projectile")
             Destroy(gameObject);
+        Debug.Log(other.gameObject.tag);
     }
 }
