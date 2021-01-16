@@ -7,6 +7,8 @@ TagManager:
   - thetag
   - The Tag
   - projectile
+  - tracer
+  - OMEGA
   layers:
   - Default
   - TransparentFX

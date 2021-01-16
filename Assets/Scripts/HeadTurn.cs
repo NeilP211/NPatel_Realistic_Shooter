@@ -9,15 +9,13 @@ public class HeadTurn : MonoBehaviour
     public float Distance_;
     Animator animator;
     Rigidbody rb;
-
-    // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         animator.SetFloat("Distance",Distance_);

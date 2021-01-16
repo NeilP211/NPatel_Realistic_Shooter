@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Camera_Controller : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     
     public GameObject player;
     public GameObject leftRight;
 
-    public float mouseSensitivity;
-
-    private float xAxisClamp;
-
     public float horizontalSpeed = 2.0f;
 
     public float verticalSpeed = 2.0f;
+
+    public int target = 240;
 
 
     private Vector3 offset;
@@ -33,23 +31,27 @@ public class Camera_Controller : MonoBehaviour
 
     public float _rotationX = 0;
     public float _rotationY = 0;
-    // Update is called once per frame
+
+    
+  
     void Update()
     {
-        //Refactor names to match old version
-
-        //player.transform.Rotate(0, Input.GetAxis("Mouse X") * sensHorizontal, 0);
+   
 
         _rotationX -= Input.GetAxis("Mouse Y") * sensVertical;
-        _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert); //Clamps the vertical angle within the min and max limits (45 degrees)
+        _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert); 
 
         _rotationY -= Input.GetAxis("Mouse X") * sensHorizontal;
-        //_rotationY = Mathf.Clamp(_rotationY, minimumVert, maximumVert); //Clamps the vertical angle within the min and max limits (45 degrees)
-        //float rotationY = transform.localEulerAngles.y;
+
+     
 
         leftRight.transform.localEulerAngles = new Vector3(_rotationX, 0, 0);
         player.transform.localEulerAngles = new Vector3(0, -_rotationY, 0);
 
+        if (target != Application.targetFrameRate)
+        {
+            Application.targetFrameRate = target;
+        }
     }
 
 
