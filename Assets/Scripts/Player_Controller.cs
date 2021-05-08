@@ -43,6 +43,14 @@ public class Player_Controller : MonoBehaviour
         
         rb.AddForce(transform.forward * speed * moveVertical);
         rb.AddForce(transform.right * speed * moveHorizontal);
-        
+
+
     }
+    void Update()
+    {
+      
+
+    }
+
+
 }

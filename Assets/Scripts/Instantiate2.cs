@@ -22,7 +22,7 @@ public class Instantiate2 : MonoBehaviour
         {
             Rigidbody bulletInstance;
             bulletInstance = Instantiate(bullet.GetComponent<Rigidbody>(), spawnPoint.position, spawnPoint.rotation);
-            bulletInstance.AddForce(spawnPoint.forward * 2000f);
+            bulletInstance.AddForce(spawnPoint.forward * 200000000f);
             shootingsound.Play();
         }
     

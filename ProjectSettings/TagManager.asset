@@ -9,6 +9,9 @@ TagManager:
   - projectile
   - tracer
   - OMEGA
+  - Min
+  - DEATH
+  - Card
   layers:
   - Default
   - TransparentFX
