@@ -13,7 +13,7 @@ public class JumpBoost : MonoBehaviour
         if (other.gameObject.CompareTag("Player")) 
         {
             Debug.Log("hello");
-            other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, 30, 0), ForceMode.Impulse);
+            other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(-45, 30, 0), ForceMode.Impulse);
         }
 
     }
